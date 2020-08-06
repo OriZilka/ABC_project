@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="landscape"
+    tools:context=".MainActivity"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="609dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="450dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.0"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.0"
+            tools:context=".MapsActivity" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        android:background="#81FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/headerTextView"
+            android:layout_width="462dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Full Accident Information:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033" />
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        app:layout_constraintHorizontal_bias="0.536"
+        <!--app:layout_constraintStart_toEndOf="@+id/map"-->
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Your location:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/locationInfoTextView"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="120dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Your location"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
+
+        <TextView
+            android:id="@+id/directionHeaderTextView"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Your directrion:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationInfoTextView" />
+
+        <TextView
+            android:id="@+id/directionInfoTextView"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="336dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="East"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/directionHeaderTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/airbagHeaderTextView"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Airbag Opened:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/directionInfoTextView" />
+
+        <TextView
+            android:id="@+id/airbagInfoTextView"
+            android:layout_width="260dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Yes"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/airbagHeaderTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/micImageButton"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="60dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="84dp"
+            android:background="#B8FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/google_mic"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
+            app:layout_constraintStart_toEndOf="@+id/sendTextButton" />
+        android:padding="0dp"/>
+
+        <EditText
+            android:id="@+id/enterTextView"
+            android:layout_width="187dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:fontFamily="@font/open_sans_light"
+            android:hint="Write your own text"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/airbagInfoTextView"
+            app:layout_constraintVertical_bias="0.542" />
+
+        <Button
+            android:id="@+id/sendTextButton"
+            android:layout_width="119dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Send Text"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.218"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="104dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="#FFFFFF"
+            android:text="-"
+            android:textSize="1sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/serverTextView"
+            android:layout_width="450dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textAlignment="center"
+            android:textColor="#264045"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/airbagInfoTextView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
